@@ -1,0 +1,96 @@
+/* General styling */
+.about {
+    max-width: 800px;
+    margin: auto;
+    padding: 5em 2em 2em; /* Add top padding to prevent overlap with the navbar */
+    scroll-margin-top: 80px; /* Adjust according to the height of your navbar */
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  
+  .about h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    text-align: center;
+    color: #e63946;
+  }
+  
+  .about p {
+    line-height: 1.6;
+    font-size: 1.1em;
+    margin-bottom: 1.5em;
+    color: #333;
+  }
+  
+  /* Skills Section */
+  .about h2 {
+    font-size: 2em;
+    margin-top: 2em;
+    text-align: center;
+    color: #1d3557;
+    position: relative;
+  }
+  
+  .about h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #457b9d;
+    margin: 0.5em auto;
+    border-radius: 2px;
+  }
+  
+  /* Skills list */
+  .about ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+    margin-top: 1em;
+  }
+  
+  .about li {
+    font-size: 1.1em;
+    color: #555;
+    padding: 10px 20px;
+    margin: 10px;
+    background: #f1faee;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+    display: inline-block;
+    animation: fadeIn 0.5s ease forwards;
+    opacity: 0;
+  }
+  
+  /* Keyframes for fading in each skill */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .about li:hover {
+    transform: scale(1.1);
+    background: #a8dadc;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    color: #1d3557;
+  }
+  
+  /* Delay animation on each skill item */
+  .about li:nth-child(1) { animation-delay: 0s; }
+  .about li:nth-child(2) { animation-delay: 0.1s; }
+  .about li:nth-child(3) { animation-delay: 0.2s; }
+  .about li:nth-child(4) { animation-delay: 0.3s; }
+  .about li:nth-child(5) { animation-delay: 0.4s; }
+  .about li:nth-child(6) { animation-delay: 0.5s; }
+  

@@ -1,22 +1,52 @@
 import React from "react";
-import ProjectCard from "../components/ProjectCard";
+import "./Projects.css";
 
 function Projects() {
-  const projectData = [
+  const projects = [
     {
-      title: "Project 1",
-      description: "A short description of Project 1",
-      imageUrl: "/path/to/image.jpg",
-      link: "https://github.com/username/project1"
+      name: "Project Tracker and Stock Picker Web Application",
+      description: "A web app for tracking projects and stocks.",
+      link: "#",
     },
-    // Add more projects
+    {
+      name: "EcoGuard",
+      description: "An environmental tracking app.",
+      link: "#",
+    },
+    {
+      name: "AI-Enhanced Speech-to-Text Application",
+      description: "An AI-powered app for speech-to-text conversion.",
+      link: "#",
+    },
+    {
+      name: "Basic Chat Application",
+      description: "A real-time chat application using Python and sockets.",
+      link: "#",
+    },
+    {
+      name: "URL Shortener",
+      description: "A simple tool for shortening URLs.",
+      link: "#",
+    },
+    {
+      name: "Job Board Platform",
+      description: "A platform for job listings and applications.",
+      link: "#",
+    },
   ];
 
   return (
     <div className="projects">
-      {projectData.map((project, index) => (
-        <ProjectCard key={index} {...project} />
-      ))}
+      <h2 className="projects-heading">My Projects</h2>
+      <div className="projects-container">
+        {projects.map((project, index) => (
+          <div className="project-card" key={index}>
+            <h4>{project.name}</h4>
+            <p>{project.description}</p>
+            <a href={project.link} className="btn">View More</a>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
