@@ -1,0 +1,11 @@
+const Home = () => {
+  console.log("Home component rendered");
+  return (
+    <div className="home">
+      <h1>Ghanshyam Sharma</h1>
+      <p>
+        I am a passionate software development engineer...
+      </p>
+    </div>
+  );
+};

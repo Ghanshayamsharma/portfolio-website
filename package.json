@@ -4,19 +4,23 @@
   "private": true,
   "homepage": "https://Ghanshayamsharma.github.io/portfolio-website/",
   "repository": {
-    "type": "git",
+    "type": "commonjs",
     "url": "https://github.com/Ghanshayamsharma/portfolio-website.git"
   },
   "author": "Ghanshayamsharma",
   "license": "ISC",
   "dependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "cross-env": "^7.0.3",
+    "framer-motion": "^4.1.17",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.27.0",
     "react-scripts": "4.0.3",
-    "cross-env": "^7.0.3"
+    "sass": "^1.80.5",
+    "web-vitals": "^4.2.4"
   },
   "scripts": {
-    "start": "cross-env PORT=3001 react-scripts start",
+    "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

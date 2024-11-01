@@ -1,15 +1,19 @@
-import { motion } from "framer-motion";
+import React from "react";
+import "./Home.css";
 
-function Home() {
+function Home({ setCurrentPage }) {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}           // Starting state
-      animate={{ opacity: 1 }}           // Ending state
-      transition={{ duration: 0.5 }}     // Duration of the transition
-    >
-      <h1>Welcome to My Portfolio</h1>
-      <p>This is where I showcase my projects and skills.</p>
-    </motion.div>
+    <div className="home">
+      <h1>Welcome to My Portfolio!</h1>
+      <h2>Your gateway to my projects and skills</h2>
+      <p>
+        Explore my work, learn about my background, and see how I can help
+        bring your ideas to life!
+      </p>
+      <button className="btn" onClick={() => setCurrentPage("Projects")}>
+        View My Projects
+      </button>
+    </div> 
   );
 }
 
