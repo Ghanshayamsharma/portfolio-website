@@ -5,13 +5,7 @@
   box-sizing: border-box;
 }
 
-/* Main Content Visibility */
-main {
-  display: block; /* Ensure main is displayed */
-  visibility: visible; /* Ensure it is visible */
-}
-
-/* Base Container Styling */
+/* Container Styling */
 .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -19,7 +13,6 @@ main {
   padding: 20px;
 }
 
-/* Responsive Adjustments */
 @media (max-width: 1024px) {
   .container {
     grid-template-columns: repeat(2, 1fr);
@@ -32,7 +25,7 @@ main {
   }
 }
 
-/* Card Styling Using Flexbox */
+/* Project Card Styling */
 .project-card {
   display: flex;
   flex-direction: column;
@@ -40,8 +33,9 @@ main {
   padding: 20px;
   background: #f0f0f0;
   border-radius: 10px;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  will-change: transform;
 }
 
 .project-card:hover {
@@ -49,9 +43,21 @@ main {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Smaller Padding for Mobile Screens */
 @media (max-width: 768px) {
   .project-card {
     padding: 15px;
   }
+}
+
+/* Main Content Visibility */
+main {
+  display: block;
+  visibility: visible; /* Ensure it is visible */
+}
+
+/* Add Focus State for Accessibility */
+.project-card:focus {
+  outline: 2px solid #ff5722;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }

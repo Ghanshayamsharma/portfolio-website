@@ -2,7 +2,7 @@
   "name": "portfolio-website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Ghanshayamsharma.github.io/portfolio-website/",
+  "homepage": "https://ghanshayamsharna.github.io/portfolio-website/",
   "repository": {
     "type": "commonjs",
     "url": "https://github.com/Ghanshayamsharma/portfolio-website.git"
@@ -20,11 +20,14 @@
     "web-vitals": "^4.2.4"
   },
   "scripts": {
-    "start": "react-scripts --openssl-legacy-provider start",
-    "build": "react-scripts build",
+    "start": "react-scripts start",
+    "build": "set NODE_OPTIONS=--openssl-legacy-provider && react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-  },
+},
+
   "eslintConfig": {
     "extends": [
       "react-app",
